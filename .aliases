@@ -6,15 +6,6 @@ alias .....="cd ../../../.."
 alias ~="cd ~" # `cd` is probably faster to type though
 alias -- -="cd -"
 
-# Shortcuts
-alias d="cd ~/Documents/Dropbox"
-alias dl="cd ~/Downloads"
-alias dt="cd ~/Desktop"
-alias p="cd ~/projects"
-alias g="git"
-alias h="history"
-alias j="jobs"
-
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
 	colorflag="--color"
@@ -147,3 +138,40 @@ alias afk="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resource
 
 # Reload the shell (i.e. invoke as a login shell)
 alias reload="exec $SHELL -l"
+
+#git
+alias gst='git status'
+alias gg='git grep -i'
+alias gge='git grep -E'
+alias gp='git pull'
+alias ga='git add'
+alias gau='git add --update'
+alias gap='git add -p'
+alias gaa='git add -A'
+alias gc='git commit -v'
+alias gca='git commit -v -a'
+alias gd='git diff'
+alias gdh='git diff HEAD'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gco='git checkout'
+alias gcob='git checkout -b'
+alias gcot='git checkout -t'
+alias gcotb='git checkout --track -b'
+alias gl='git log --decorate=full'
+alias glp='git log --pretty=format:"%C(yellow) %h %Cgreen%ad%C(red)[%an]%C(cyan)%d %Creset%s" --graph --date=short'
+alias gls='git log -S'
+alias gs='git status'
+
+alias a='fasd -a'        # any
+alias s='fasd -si'       # show / search / select
+alias d='fasd -d'        # directory
+alias f='fasd -f'        # file
+alias sd='fasd -sid'     # interactive directory selection
+alias sf='fasd -sif'     # interactive file selection
+alias z='fasd_cd -d'     # cd, same functionality as j in autojump
+alias zz='fasd_cd -d -i' # cd with interactive selection
+alias v='f -e vim' # quick opening files with vim
+
+# ansible
+alias ap='ansible-playbook -i hosts'
