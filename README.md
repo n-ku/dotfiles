@@ -10,8 +10,14 @@
 
 You can clone the repository wherever you want. (I like to keep it in `~/Projects/dotfiles`, with `~/dotfiles` as a symlink.) The bootstrapper script will pull in the latest version and copy the files to your home folder.
 
+**Warning**: On new versions of MacOS, you need to change the shell to bash for the following to work.
+
 ```bash
-git clone https://github.com/mathiasbynens/dotfiles.git && cd dotfiles && source bootstrap.sh
+chsh -s /bin/bash
+```
+
+```bash
+git clone https://github.com/n-ku/dotfiles.git && cd dotfiles && source bootstrap.sh
 ```
 
 To update, `cd` into your local `dotfiles` repository and then:
